@@ -45,5 +45,4 @@ class Employee {
     public void logHours(double addHours) {
         hours += addHours;
     }
-
 }
