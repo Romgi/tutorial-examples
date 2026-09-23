@@ -12,6 +12,7 @@ class Employee {
 
     private String name;
     private double salary;
+    private double hours;
     private LocalDate hireDay;
 
     public Employee(String n, double s, int year, int month, int day) {
@@ -28,6 +29,10 @@ class Employee {
         return salary;
     }
 
+    public double getHours() {
+        return hours;
+    }
+
     public LocalDate getHireDay() {
         return hireDay;
     }
@@ -37,5 +42,8 @@ class Employee {
         salary += raise;
     }
 
-    // Add a method to the Employee class (what method you think an employee would need?), and show to TA for this week's tutorial mark
+    public void logHours(double addHours) {
+        hours += addHours;
+    }
+
 }
