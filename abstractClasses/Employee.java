@@ -5,6 +5,7 @@ import java.time.*;
 public class Employee extends Person {
 
     private double salary;
+    private double totalHours;
     private LocalDate hireDay;
 
     public Employee(String name, double salary, int year, int month, int day) {
@@ -21,6 +22,10 @@ public class Employee extends Person {
         return hireDay;
     }
 
+    public double getHours() {
+        return totalHours;
+    }
+
     public String getDescription() {
         return "an employee with a salary of $%.2f".formatted(salary);
     }
@@ -28,5 +33,9 @@ public class Employee extends Person {
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
         salary += raise;
+    }
+
+    public void logHours(double addHours) {
+        totalHours += addHours;
     }
 }
